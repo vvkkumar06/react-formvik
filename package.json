@@ -1,6 +1,6 @@
 {
   "name": "react-formvik",
-  "version": "0.3.1",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "type": "module",
