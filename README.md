@@ -23,7 +23,7 @@ export default function App() {
       <div className="container w-50 mt-5 ">
         <Form
           name="Register"
-          preset='login'
+          preset='register'
           config={{
             fields: [
               {
