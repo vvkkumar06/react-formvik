@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import * as PropTypes from 'prop-types';
 import FormField from "./FormField";
 import { getInitialFormState, mergeActionsConfig, mergeFieldsConfig } from "./helpers";
@@ -8,7 +8,7 @@ import * as FormPresets from "./presetConfigs";
 /**
  * Form component for generating dynamic forms
  */
-export const Form = ({ name, config, onSubmit, preset }) => {
+export const Form = ({ name, config, onSubmit, preset, onChange }) => {
   if(!name && preset) {
     name = preset.charAt(0).toUpperCase() + preset.slice(1);
   }
@@ -34,6 +34,12 @@ export const Form = ({ name, config, onSubmit, preset }) => {
         break;
     }
   };
+
+  useEffect(() => {
+    if(onChange) {
+      onChange(formState)
+    }
+  }, [formState])
 
   return (
     <form noValidate className={formCss.formClass}>
