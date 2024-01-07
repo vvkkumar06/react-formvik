@@ -15,7 +15,7 @@ export const Form = ({ name, config, onSubmit, preset, onChange }) => {
   const formPreset = FormPresets[preset] || {};
   const formFieldsConfig = mergeFieldsConfig(formPreset, config);
   const formActionsConfig = mergeActionsConfig(formPreset, config);
-  const formCss = { ...formPreset.css, ...config.css}
+  const formCss = { ...formPreset.css, ...config.css};
   
   const resetFormState = () => getInitialFormState(formFieldsConfig);
   const [formState, setFormState] = useState(resetFormState());
@@ -61,16 +61,16 @@ export const Form = ({ name, config, onSubmit, preset, onChange }) => {
         })}
       </main>
 
-      <footer className="rqf-footer">
+      <footer className={`rqf-footer ${formCss.footerClass}`}>
         {formActionsConfig.map((actionConfig) => {
           return (
-            <div className={`rqf-action ${actionConfig.css?.containerClass}`} key={`action-${actionConfig.label}`}>
+            <div className={`rqf-action ${actionConfig.css?.containerClass ??  formCss.containerClass}`} key={`action-${actionConfig.label}`}>
               <button onClick={(e) => {
                   e.preventDefault();
                   e.stopPropagation();
                   handleAction(actionConfig)
                 }
-              } className={actionConfig.css?.buttonClass}
+              } className={actionConfig.css?.buttonClass ?? formCss.buttonClass}
                 disabled={
                   Object.values(formState._isValidField).includes(undefined) || 
                   Object.values(formState._isValidField).includes(false)}
