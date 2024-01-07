@@ -1,5 +1,7 @@
 # React FormVik
 
+![React FormVik](https://raw.githubusercontent.com/vvkkumar06/react-formvik/main/.storybook/formvik-logo.png)
+
 Highly customizable, super fast react form creation library. It allows you to choose one of the presets available as form template and customize on top of it.
 
 ## Installation
