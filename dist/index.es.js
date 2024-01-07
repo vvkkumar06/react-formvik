@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { jsxs, jsx } from 'react/jsx-runtime';
 
 var propTypes = {exports: {}};
@@ -1257,7 +1257,7 @@ const FormField = ({
 const getInitialFormState = formFieldsConfig => {
   const newState = {};
   formFieldsConfig.forEach(config => {
-    newState[config.field] = config.defaultValue || '';
+    newState[config.field] = config.defaultValue ?? '';
     if (!newState['_isValidField']) newState['_isValidField'] = {};
     if (config.inputProps?.required) {
       newState._isValidField[config.field] = undefined;
@@ -1451,7 +1451,8 @@ const Form = ({
   name,
   config,
   onSubmit,
-  preset
+  preset,
+  onChange
 }) => {
   if (!name && preset) {
     name = preset.charAt(0).toUpperCase() + preset.slice(1);
@@ -1479,6 +1480,11 @@ const Form = ({
         break;
     }
   };
+  useEffect(() => {
+    if (onChange) {
+      onChange(formState);
+    }
+  }, [formState]);
   return /*#__PURE__*/jsxs("form", {
     noValidate: true,
     className: formCss.formClass,
