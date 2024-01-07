@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import formvikTheme from './formvikTheme';
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {
@@ -9,6 +10,9 @@ const preview = {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
+      docs: {
+        theme: formvikTheme
+      }
     },
   },
 };

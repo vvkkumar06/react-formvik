@@ -1,3 +1,5 @@
+import { themes } from '@storybook/theming';
+
 /** @type { import('@storybook/react-vite').StorybookConfig } */
 const config = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
@@ -13,6 +15,6 @@ const config = {
   },
   docs: {
     autodocs: "tag",
-  },
+  }
 };
 export default config;
