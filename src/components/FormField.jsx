@@ -20,15 +20,19 @@ const FormField = ({ formName, config, formState, formCss, setFormState }) => {
 
   const renderField = () => {
     if (config.inputProps.type === 'dropdown') {
-     return <select value={formState[config.field]} id={elId} onChange={onChange} name={config.field} className={inputClass}>
+      return <select value={formState[config.field]} id={elId} onChange={onChange} name={config.field} className={inputClass}>
         {
-          config.inputProps.options?.map(option => <option value={option.value} 
-            key={option.value} {...(config.inputProps.selected === option.value? {selected: true} : {selected: false})}>{option.label}</option>)
+          config.inputProps.options?.map(option => <option value={option.value}
+            key={option.value} {...(config.inputProps.selected === option.value ? { selected: true } : { selected: false })}>{option.label}</option>)
         }
       </select>
-    } else {
+    } else if (config.inputProps.type === "text" && (config.inputProps.rows || config.inputProps.cols)) {
+      return <textarea {...config.inputProps} id={elId}
+        onChange={onChange} name={config.field} className={inputClass} >{formState[config.field]}</textarea>
+    }
+    else {
       return <input value={formState[config.field]} {...config.inputProps} id={elId}
-        onChange={onChange} name={config.field} checked={config.inputProps.type !== 'radio'  ? formState[config.field] : formState[config.field] === config.inputProps.value } className={inputClass} />
+        onChange={onChange} name={config.field} checked={config.inputProps.type !== 'radio' ? formState[config.field] : formState[config.field] === config.inputProps.value} className={inputClass} />
     };
   }
 

@@ -38,6 +38,31 @@ export const Text = {
     }
 }
 
+export const MultilineText = {
+    args: {
+        config: {
+            fields: [
+                {
+                    label: "Comment",
+                    field: "comment",
+                    inputProps: {
+                        type: "text",
+                        rows: 10,
+                        cols: 50
+                    },
+                    order: 2,
+                    css: {
+                        labelClass: 'form-label',
+                        inputClass: 'form-control',
+                        containerClass: 'mt-4'
+                    }
+                },
+
+            ]
+        }
+    }
+}
+
 export const Number = {
     args: {
         config: {
