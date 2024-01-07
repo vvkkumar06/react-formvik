@@ -17,6 +17,9 @@ export default {
                     register: 'Register'
                 }
             }
+        },
+        onSubmit: {
+            action: 'Form State: '
         }
     }
 }

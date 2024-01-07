@@ -3,7 +3,7 @@ export const getInitialFormState = (formFieldsConfig) => {
   
     formFieldsConfig.forEach(
       (config) => {
-        newState[config.field] = config.defaultValue || ''
+        newState[config.field] = config.defaultValue ?? ''
         if(!newState['_isValidField']) newState['_isValidField'] = {};
         if(config.inputProps?.required) {
           newState._isValidField[config.field] = undefined;
