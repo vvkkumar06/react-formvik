@@ -9,12 +9,20 @@ export default {
     },
     argTypes: {
         preset: {
-            options: ['login', 'register'],
+            options: ['login', 'register', 'contactUs', 'feedback', 'jobApplication', 'passwordReset', 'inquiry', 'survey', 'membershipRegistration', 'eventRegistration'],
             control: {
                 type: 'radio',
                 labels: {
                     login: 'Login',
-                    register: 'Register'
+                    register: 'Register',
+                    contactUs: 'Contact',
+                    feedback: 'Feedback',
+                    jobApplication: 'Job Application',
+                    passwordReset: 'Password Reset',
+                    inquiry: 'Inquiry',
+                    survey: 'Survey',
+                    membershipRegistration: 'Membership Registration',
+                    eventRegistration: 'Event Registration'
                 }
             }
         },
@@ -46,11 +54,6 @@ export const InjectingCustomConfig = {
                     },
                     validation: {
                         errorMessage: 'Please enter valid age!'
-                    },
-                    css: {
-                        labelClass: 'form-label',
-                        inputClass: 'form-control',
-                        containerClass: 'mt-4'
                     }
                 }
             ]
@@ -58,3 +61,4 @@ export const InjectingCustomConfig = {
     },
 
 }
+
