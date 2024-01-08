@@ -17,20 +17,22 @@ export const getInitialFormState = (formFieldsConfig) => {
   export const mergeFieldsConfig =(config1, config2) => {
     const config1GroupByField = {};
     config1.fields?.forEach(item => {
-      config1GroupByField[item.field+item.order] = item;
+      config1GroupByField[item.field] = item;
     })
     const config2GroupByField = {};
     config2.fields?.forEach(item => {
-      config2GroupByField[item.field+item.order] = item;
+      config2GroupByField[item.field] = item;
     });
 
     const mergedConfig = { ...config1GroupByField, ...config2GroupByField};
     const fieldsList =  Object.values(mergedConfig);
-    const fieldsByOrder = {};
-    fieldsList.forEach((item) => {
-      fieldsByOrder[item.order] = item;
+    fieldsList.forEach((item, index) => {
+      if(item.order !== undefined && item.order > 0){
+        const adjustedItem = fieldsList.splice(index, 1);
+        fieldsList.splice(item.order - 1, 0, adjustedItem[0]);
+      }
     });
-    return Object.values(fieldsByOrder);
+    return fieldsList;
   }
   
   export const mergeActionsConfig =(config1, config2) => {
