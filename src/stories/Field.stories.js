@@ -25,7 +25,6 @@ export const Text = {
                     validation: {
                         errorMessage: 'Please provide valid First Name'
                     },
-                    order: 2,
                     css: {
                         labelClass: 'form-label',
                         inputClass: 'form-control',
@@ -50,7 +49,6 @@ export const MultilineText = {
                         rows: 10,
                         cols: 50
                     },
-                    order: 2,
                     css: {
                         labelClass: 'form-label',
                         inputClass: 'form-control',
@@ -74,7 +72,6 @@ export const Number = {
                         type: "number",
                         required: true
                     },
-                    order: 1,
                     css: {
                         labelClass: 'form-label',
                         inputClass: 'form-control',
@@ -100,7 +97,6 @@ export const Password = {
                     validation: {
                         errorMessage: 'Please provide valid password'
                     },
-                    order: 2,
                     css: {
                         labelClass: 'form-label',
                         inputClass: 'form-control',
@@ -126,7 +122,6 @@ export const Email = {
                     validation: {
                         errorMessage: 'Please provide valid Email!'
                     },
-                    order: 2,
                     css: {
                         labelClass: 'form-label',
                         inputClass: 'form-control',
@@ -143,30 +138,26 @@ export const Radio = {
         config: {
             fields: [
                 {
-                    label: 'Male',
+                    label: 'Gender',
                     field: 'gender',
-                    labelPosition: 'end',
                     inputProps: {
                         type: 'radio',
-                        value: 'male'
+                        options: [
+                            {
+                                label: 'Male', value: 'male',
+                            },
+                            {
+                                label: 'Female', value: 'female'
+                            }
+                        ]
                     },
-                    order: 1
-                },
-                {
-                    label: 'Female',
-                    field: 'gender',
-                    labelPosition: 'end',
-                    inputProps: {
-                        type: 'radio',
-                        value: 'female'
-                    },
-                    order: 2
                 }
             ],
             css: {
-                labelClass: 'form-check-label',
+                radioLabelClass: 'form-check-label',
                 inputClass: 'form-check-input',
-                containerClass: 'form-check mt-4'
+                radioContainerClass: 'form-check mt-4',
+                radioGroupClass: 'd-flex gap-4'
             }
         }
     }
@@ -185,7 +176,6 @@ export const Checkbox = {
                     inputProps: {
                         type: 'checkbox',
                     },
-                    order: 1
                 }
             ],
             css: {
@@ -204,7 +194,6 @@ export const Url = {
                 {
                     label: 'Website',
                     field: 'url',
-                    order: 1,
                     inputProps: {
                         type: 'url',
                         pattern: "^(http:\/\/|https:\/\/)?(www.)?([a-zA-Z0-9]+).[a-zA-Z0-9]*.[a-z]{3}.?([a-z]+)?$"
@@ -230,7 +219,6 @@ export const Select = {
                 {
                     label: 'Language',
                     field: 'lang',
-                    order: 1,
                     inputProps: {
                         type: 'dropdown',
                         options: [{ label: 'Select One', field: '' }, { label: 'Hindi', value: 'Hindi' }, { label: 'English', value: 'English' }],
@@ -253,7 +241,6 @@ export const Color = {
                 {
                     label: 'Choose Color',
                     field: 'color',
-                    order: 1,
                     inputProps: {
                         type: 'color',
                     },
@@ -275,7 +262,6 @@ export const Date = {
                 {
                     label: 'Delivery Date',
                     field: 'deliveryDate',
-                    order: 2,
                     inputProps: {
                         type: 'date'
                     },
@@ -298,7 +284,6 @@ export const Time = {
                 {
                     label: 'Pickup Time',
                     field: 'pickupTime',
-                    order: 1,
                     inputProps: {
                         type: 'time',
                         min: "09:00",
@@ -326,7 +311,6 @@ export const Range = {
                     label: 'Volume',
                     field: 'vol',
                     defaultValue: 40,
-                    order: 1,
                     inputProps: {
                         type: 'range',
                         min: 20,

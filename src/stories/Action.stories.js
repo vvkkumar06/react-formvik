@@ -6,7 +6,6 @@ const fields = [
         inputProps: {
             type: "text",
         },
-        order: 1,
         css: {
             labelClass: 'form-label',
             inputClass: 'form-control',
@@ -19,7 +18,6 @@ const fields = [
         inputProps: {
             type: "text",
         },
-        order: 2,
         css: {
             labelClass: 'form-label',
             inputClass: 'form-control',

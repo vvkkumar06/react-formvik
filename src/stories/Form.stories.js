@@ -46,7 +46,7 @@ export const InjectingCustomConfig = {
                 {
                     label: 'Age',
                     field: 'age',
-                    order: 22,
+                    order: 3,
                     inputProps: {
                         type: 'number',
                         max: 100,

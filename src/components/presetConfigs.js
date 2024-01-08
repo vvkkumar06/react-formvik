@@ -6,15 +6,13 @@ export const login = {
             inputProps: {
                 type: "text"
             },
-            order: 10
         },
         {
             label: "Password",
             field: "password",
             inputProps: {
                 type: "password"
-            },
-            order: 20
+            }
         }
     ],
     actions: [
@@ -47,7 +45,6 @@ export const register = {
             validation: {
                 errorMessage: 'Please provide valid First Name'
             },
-            order: 10
         },
         {
             label: "Last Name",
@@ -58,24 +55,21 @@ export const register = {
             },
             validation: {
                 errorMessage: 'Please provide valid Last Name'
-            },
-            order: 20
+            }
         },
         {
             label: "Email Address",
             field: "email",
             inputProps: {
                 type: "email"
-            },
-            order: 30
+            }
         },
         {
             label: "Phone Number",
             field: "phone",
             inputProps: {
                 type: "phone"
-            },
-            order: 40
+            }
         },
         {
             label: "Website",
@@ -83,12 +77,10 @@ export const register = {
             inputProps: {
                 type: "url"
             },
-            order: 50
         },
         {
             label: 'Gender',
             field: 'gen',
-            order: 60,
             inputProps: {
                 type: 'dropdown',
                 options: [{ label: 'Select One', field: '' }, { label: 'Male', value: 'male' }, { label: 'Female', value: 'female' }],
@@ -103,16 +95,14 @@ export const register = {
             field: "password",
             inputProps: {
                 type: "password"
-            },
-            order: 80
+            }
         },
         {
             label: "Confirm Password",
             field: "confirmPassword",
             inputProps: {
                 type: "password"
-            },
-            order: 90
+            }
         },
         {
             label: "Creating an account means you'are okay with our Terms and Conditions and our Privacy Policiy",
@@ -125,8 +115,7 @@ export const register = {
                 inputClass: 'w-10 mt-1',
                 labelClass: 'fw-lighter fst-italic mx-2',
                 containerClass: 'd-flex align-items-start mt-4'
-            },
-            order: 100
+            }
         }
     ],
     actions: [
@@ -158,8 +147,7 @@ export const contactUs = {
             },
             validation: {
                 errorMessage: 'Please provide your full name'
-            },
-            order: 10
+            }
         },
         {
             label: "Email Address",
@@ -170,16 +158,14 @@ export const contactUs = {
             },
             validation: {
                 errorMessage: 'Please provide a valid email address'
-            },
-            order: 20
+            }
         },
         {
             label: "Subject",
             field: "subject",
             inputProps: {
                 type: "text"
-            },
-            order: 30
+            }
         },
         {
             label: "Message",
@@ -187,8 +173,7 @@ export const contactUs = {
             inputProps: {
                 type: "text",
                 rows: 4
-            },
-            order: 40
+            }
         }
     ],
     actions: [
@@ -221,8 +206,7 @@ export const feedback = {
             },
             validation: {
                 errorMessage: 'Please provide your name'
-            },
-            order: 10
+            }
         },
         {
             label: "Email Address",
@@ -233,8 +217,7 @@ export const feedback = {
             },
             validation: {
                 errorMessage: 'Please provide a valid email address'
-            },
-            order: 20
+            }
         },
         {
             label: "Feedback Type",
@@ -251,8 +234,7 @@ export const feedback = {
             },
             validation: {
                 errorMessage: 'Please select a feedback type'
-            },
-            order: 30
+            }
         },
         {
             label: "Your Feedback",
@@ -264,8 +246,7 @@ export const feedback = {
             },
             validation: {
                 errorMessage: 'Please provide your feedback'
-            },
-            order: 40
+            }
         }
     ],
     actions: [
@@ -296,8 +277,7 @@ export const jobApplication = {
             },
             validation: {
                 errorMessage: 'Please provide your full name'
-            },
-            order: 10
+            }
         },
         {
             label: "Email Address",
@@ -308,8 +288,7 @@ export const jobApplication = {
             },
             validation: {
                 errorMessage: 'Please provide a valid email address'
-            },
-            order: 20
+            }
         },
         {
             label: "Phone Number",
@@ -320,8 +299,7 @@ export const jobApplication = {
             },
             validation: {
                 errorMessage: 'Please provide a valid phone number'
-            },
-            order: 30
+            }
         },
         {
             label: "Applying for Position",
@@ -332,8 +310,7 @@ export const jobApplication = {
             },
             validation: {
                 errorMessage: 'Please specify the position you are applying for'
-            },
-            order: 40
+            }
         },
         {
             label: "Resume/CV",
@@ -345,8 +322,7 @@ export const jobApplication = {
             },
             validation: {
                 errorMessage: 'Please upload your resume in PDF or Word format'
-            },
-            order: 50
+            }
         },
         {
             label: "Cover Letter",
@@ -354,8 +330,7 @@ export const jobApplication = {
             inputProps: {
                 type: "text",
                 rows: 4
-            },
-            order: 60
+            }
         }
     ],
     actions: [
@@ -386,16 +361,14 @@ export const passwordReset = {
             },
             validation: {
                 errorMessage: 'Please provide a valid email address'
-            },
-            order: 10
+            }
         },
         {
             label: "Username",
             field: "username",
             inputProps: {
                 type: "text"
-            },
-            order: 20
+            }
         },
         {
             label: "New Password",
@@ -406,8 +379,7 @@ export const passwordReset = {
             },
             validation: {
                 errorMessage: 'Password must be at least 8 characters long'
-            },
-            order: 30
+            }
         },
         {
             label: "Confirm New Password",
@@ -418,8 +390,7 @@ export const passwordReset = {
             },
             validation: {
                 errorMessage: 'Passwords do not match'
-            },
-            order: 40
+            }
         }
     ],
     actions: [
@@ -439,7 +410,7 @@ export const passwordReset = {
     }
 };
 
-export const inquiry= {
+export const inquiry = {
     fields: [
         {
             label: "Full Name",
@@ -450,8 +421,7 @@ export const inquiry= {
             },
             validation: {
                 errorMessage: 'Please provide your full name'
-            },
-            order: 10
+            }
         },
         {
             label: "Email Address",
@@ -462,16 +432,14 @@ export const inquiry= {
             },
             validation: {
                 errorMessage: 'Please provide a valid email address'
-            },
-            order: 20
+            }
         },
         {
             label: "Phone Number",
             field: "phone",
             inputProps: {
                 type: "tel"
-            },
-            order: 30
+            }
         },
         {
             label: "Inquiry Type",
@@ -488,8 +456,7 @@ export const inquiry= {
             },
             validation: {
                 errorMessage: 'Please select an inquiry type'
-            },
-            order: 40
+            }
         },
         {
             label: "Message",
@@ -501,8 +468,7 @@ export const inquiry= {
             },
             validation: {
                 errorMessage: 'Please provide your inquiry message'
-            },
-            order: 50
+            }
         }
     ],
     actions: [
@@ -533,8 +499,7 @@ export const survey = {
             },
             validation: {
                 errorMessage: 'Please provide your name'
-            },
-            order: 10
+            }
         },
         {
             label: "Email Address",
@@ -545,8 +510,7 @@ export const survey = {
             },
             validation: {
                 errorMessage: 'Please provide a valid email address'
-            },
-            order: 20
+            }
         },
         {
             label: "Age",
@@ -558,16 +522,14 @@ export const survey = {
             },
             validation: {
                 errorMessage: 'Please provide a valid age (must be 18 or older)'
-            },
-            order: 30
+            }
         },
         {
             label: "How did you hear about us?",
             field: "source",
             inputProps: {
                 type: "text"
-            },
-            order: 40
+            }
         },
         {
             label: "Rate your satisfaction with our products/services (1-10)",
@@ -580,8 +542,7 @@ export const survey = {
             },
             validation: {
                 errorMessage: 'Please provide a rating between 1 and 10'
-            },
-            order: 50
+            }
         },
         {
             label: "What improvements would you suggest?",
@@ -589,8 +550,7 @@ export const survey = {
             inputProps: {
                 type: "text",
                 rows: 4
-            },
-            order: 60
+            }
         }
     ],
     actions: [
@@ -622,8 +582,7 @@ export const membershipRegistration = {
             },
             validation: {
                 errorMessage: 'Please provide your full name'
-            },
-            order: 10
+            }
         },
         {
             label: "Email Address",
@@ -634,24 +593,21 @@ export const membershipRegistration = {
             },
             validation: {
                 errorMessage: 'Please provide a valid email address'
-            },
-            order: 20
+            }
         },
         {
             label: "Phone Number",
             field: "phone",
             inputProps: {
                 type: "tel"
-            },
-            order: 30
+            }
         },
         {
             label: "Address",
             field: "address",
             inputProps: {
                 type: "text"
-            },
-            order: 40
+            }
         },
         {
             label: "Membership Type",
@@ -668,64 +624,30 @@ export const membershipRegistration = {
             },
             validation: {
                 errorMessage: 'Please select a membership type'
-            },
-            order: 50
+            }
         },
         {
-            label: "Credit Card",
+            label: "Payment Method",
             field: "paymentMethod",
             inputProps: {
                 type: "radio",
-                value: 'creditCard',
+                options: [
+                    { label: 'Credit Card', value: 'creditCard' },
+                    { label: "PayPal", value: 'paypal' },
+                    { label: "Bank Transfer", value: 'bankTransfer' }
+                ],
                 required: true
             },
             validation: {
                 errorMessage: 'Please select a payment method'
             },
-            order: 60,
             css: {
-                labelClass: 'form-check-label',
+                radioLabelClass: 'form-check-label',
                 inputClass: 'form-check-input',
-                containerClass: 'form-check mt-4'
+                radioContainerClass: 'form-check mt-4',
+                radioGroupClass: 'd-flex gap-4'
             }
-        },
-        {
-            label: "PayPal",
-            field: "paymentMethod",
-            inputProps: {
-                type: "radio",
-                value: 'paypal',
-                required: true
-            },
-            validation: {
-                errorMessage: 'Please select a payment method'
-            },
-            order: 70,
-            css: {
-                labelClass: 'form-check-label',
-                inputClass: 'form-check-input',
-                containerClass: 'form-check mt-4'
-            }
-        },
-        {
-            label: "Bank Transfer",
-            field: "paymentMethod",
-            inputProps: {
-                type: "radio",
-                value: 'bankTransfer',
-                required: true
-            },
-            validation: {
-                errorMessage: 'Please select a payment method'
-            },
-            order: 80,
-            css: {
-                labelClass: 'form-check-label',
-                inputClass: 'form-check-input',
-                containerClass: 'form-check mt-4'
-            }
-        },
-       
+        }
     ],
     actions: [
         {
@@ -755,8 +677,7 @@ export const eventRegistration = {
             },
             validation: {
                 errorMessage: 'Please provide your full name'
-            },
-            order: 10
+            }
         },
         {
             label: "Email Address",
@@ -767,8 +688,7 @@ export const eventRegistration = {
             },
             validation: {
                 errorMessage: 'Please provide a valid email address'
-            },
-            order: 20
+            }
         },
         {
             label: "Phone Number",
@@ -779,8 +699,7 @@ export const eventRegistration = {
             },
             validation: {
                 errorMessage: 'Please provide a valid phone number'
-            },
-            order: 30
+            }
         },
         {
             label: "Event Name",
@@ -791,8 +710,7 @@ export const eventRegistration = {
             },
             validation: {
                 errorMessage: 'Please specify the event you are registering for'
-            },
-            order: 40
+            }
         },
         {
             label: "Number of Guests",
@@ -800,8 +718,7 @@ export const eventRegistration = {
             inputProps: {
                 type: "number",
                 min: 1
-            },
-            order: 50
+            }
         },
         {
             label: "Special Requests",
@@ -809,8 +726,7 @@ export const eventRegistration = {
             inputProps: {
                 type: "text",
                 rows: 4
-            },
-            order: 60
+            }
         }
     ],
     actions: [
