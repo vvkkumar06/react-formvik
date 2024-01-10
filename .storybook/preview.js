@@ -14,6 +14,11 @@ const preview = {
         theme: formvikTheme
       }
     },
+    options: {
+      storySort: {
+        order: ['Introduction', ['Using Preset Config','Injecting Custom Config'], 'Fields', 'Actions', ['Submit', 'Reset'], 'Presets'],
+      },
+    }
   },
 };
 
