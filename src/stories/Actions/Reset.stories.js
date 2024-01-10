@@ -1,4 +1,4 @@
-import { Form } from '../components/Form'
+import { Form } from '../../components/Form'
 const fields = [
     {
         label: "Address1",
@@ -27,32 +27,15 @@ const fields = [
 ];
 
 export default {
-    title: 'Actions',
+    title: 'Actions/Reset',
     component: Form,
     parameters: {
         layout: 'centered'
     },
+    tags: ['autodocs'],
     argTypes: {
         onSubmit: {
             action: "Form State: "
-        }
-    }
-}
-
-export const Submit = {
-    args: {
-        config: {
-            fields,
-            actions: [
-                {
-                    label: "Submit",
-                    type: "submit",
-                    css: {
-                        buttonClass: 'btn btn-primary ml-auto',
-                        containerClass: 'mt-4 d-flex justify-content-end'
-                    }
-                }
-            ]
         }
     }
 }

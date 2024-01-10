@@ -1,9 +1,8 @@
-import { Form } from './../components/Form';
+import { Form } from '../../components/Form';
 
 export default {
-    title: 'Form',
+    title: 'Introduction/Injecting Custom Config',
     component: Form,
-    tags: ['autodocs'],
     parameters: {
         layout: 'centered'
     },
@@ -29,12 +28,6 @@ export default {
         onSubmit: {
             action: 'Form State: '
         }
-    }
-}
-
-export const UsingPresetConfig = {
-    args: {
-        preset: 'login'
     }
 }
 
