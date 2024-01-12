@@ -55,7 +55,7 @@ export default function App() {
 }
 
 ```
-[Live Demo](https://fascinating-paletas-04c303.netlify.app/?path=/docs/form--docs)
+[Live Demo](https://fascinating-paletas-04c303.netlify.app/?path=/story/introduction-using-preset-config--using-preset-config)
 
 ## Contributing
 
