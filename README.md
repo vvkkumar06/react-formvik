@@ -8,6 +8,7 @@ Highly customizable, super fast react form creation library. It allows you to ch
 <p align="center" style="margin-bottom: 20px !important;">
   <img src="https://raw.githubusercontent.com/vvkkumar06/react-formvik/main/src/assets/feedback.gif" alt="Feedback form" align="center">
 </p>
+
 ## Installation
 
 Use npm to install react-formvik.
