@@ -20,7 +20,8 @@ export const File = {
                     label: 'Upload',
                     field: 'resume',
                     inputProps: {
-                        type: 'file'
+                        type: 'file',
+                        multiple: true
                     },
                     css: {
                         labelClass: 'form-label',

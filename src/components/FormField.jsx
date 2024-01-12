@@ -17,7 +17,12 @@ const FormField = ({ formName, config, formState, formCss, setFormState }) => {
     updateFormState(target, config.inputProps?.type === 'checkbox');
   };
 
-  const updateFormState = (target, isCheckbox) => setFormState({ ...formState, [config.field]: isCheckbox ? target.checked : target.value, _isValidField: { ...formState._isValidField, [config.field]: target.checkValidity() } });
+  const updateFormState = (target, isCheckbox) => setFormState(
+    {
+      ...formState,
+      [config.field]: isCheckbox ? target.checked : target.files ?? target.value,
+      _isValidField: { ...formState._isValidField, [config.field]: target.checkValidity() }
+    });
 
   const renderLabel = (label, className) => <label htmlFor={elId} className={className ?? labelClass}>{label ?? config.label}</label>;
 
@@ -46,8 +51,9 @@ const FormField = ({ formName, config, formState, formCss, setFormState }) => {
             ))
           }
         </div>);
-
-
+    } else if (config.inputProps.type === 'file') {
+      return <input  {...config.inputProps} id={elId}
+        onChange={onChange} name={config.field} checked={formState[config.field]} className={inputClass} />
     }
     else {
       return <input value={formState[config.field]} {...config.inputProps} id={elId}
