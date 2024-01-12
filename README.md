@@ -5,8 +5,9 @@
 Highly customizable, super fast react form creation library. It allows you to choose one of the presets available as form template and customize on top of it.
 
 ## Preview
-![](https://raw.githubusercontent.com/vvkkumar06/react-formvik/main/src/assets/feedback.gif)
-
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="200" src="https://raw.githubusercontent.com/vvkkumar06/react-formvik/main/src/assets/feedback.gif" alt="Material Bread logo" align="center">
+</p>
 ## Installation
 
 Use npm to install react-formvik.
