@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
-import { DropdownOption, FormFieldProps } from "./types";
+import { ReactNode, memo } from "react";
+import { DropdownOption, FormFieldProps, FormState } from "./types";
 
 
 const FormField = ({ formName, config, formState, formCss, setFormState }: FormFieldProps): ReactNode => {
@@ -15,16 +15,19 @@ const FormField = ({ formName, config, formState, formCss, setFormState }: FormF
 
   const elId = `rqf-${formName}-${config.field}`;
 
-  const onChange = ({ target }: { target: any}) => {
+  const onChange = ({ target }: { target: any }) => {
     updateFormState(target, config.inputProps?.type === 'checkbox');
   };
 
-  const updateFormState = (target: any, isCheckbox: boolean) => setFormState(
-    {
-      ...formState,
-      [config.field]: isCheckbox ? target.checked : target.files ?? target.value,
-      _isValidField: { ...formState._isValidField, [config.field]: target.checkValidity() }
-    });
+  const updateFormState = (target: any, isCheckbox: boolean) => {
+    (setFormState as any)((prevState: FormState) => {
+      return {
+        ...prevState,
+        [config.field]: isCheckbox ? target.checked : target.files ?? target.value,
+        _isValidField: { ...prevState._isValidField, [config.field]: target.checkValidity() }
+      }
+    })
+  }
 
   const renderLabel = (label?: string, className?: string) => <label htmlFor={elId} className={className ?? labelClass}>{label ?? config.label}</label>;
 
@@ -78,4 +81,7 @@ const FormField = ({ formName, config, formState, formCss, setFormState }: FormF
   );
 };
 
-export default FormField;
+export default memo(FormField, (prevProps, nextProps) => {
+  const field = nextProps?.config?.field;
+  return prevProps.formState[field] === nextProps.formState[field];
+});

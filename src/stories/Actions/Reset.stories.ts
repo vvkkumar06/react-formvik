@@ -65,6 +65,7 @@ export const Reset: Story = {
                 containerClass: 'mt-4 d-flex justify-content-end',
                 footerClass: 'd-flex gap-2 justify-content-end'
             }
-        }
+        },
+        onChange: undefined
     }
 }

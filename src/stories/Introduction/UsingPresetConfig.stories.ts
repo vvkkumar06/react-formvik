@@ -39,7 +39,8 @@ type Story = StoryObj<typeof meta>;
 
 export const UsingPresetConfig: Story = {
     args: {
-        preset: 'login'
+        preset: 'login',
+        onChange: undefined
     }
 }
 
