@@ -51,3 +51,16 @@ export const getInitialFormState = (formFieldsConfig: Array<FieldConfig>): FormS
     return Object.values(mergedConfig);
   }
   
+  export const debounce = (func: any, delay: number) => {
+    let timeoutId: any;
+  
+    return function(this: any, ...args: any) {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        func.apply(this, args);
+      }, delay);
+      
+    };
+  };
+  
+  
