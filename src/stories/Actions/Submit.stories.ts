@@ -59,6 +59,7 @@ export const Submit: Story = {
                     }
                 }
             ]
-        }
+        },
+        onChange: undefined
     }
 }

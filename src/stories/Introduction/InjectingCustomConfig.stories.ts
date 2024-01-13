@@ -56,6 +56,7 @@ export const InjectingCustomConfig: Story = {
                 }
             ]
         },
+        onChange: undefined
     },
 
 }
