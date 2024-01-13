@@ -1,4 +1,3 @@
-import { userEvent, within } from "@storybook/testing-library";
 import { Meta, StoryObj} from '@storybook/react';
 import Form from "../../components/Form";
 
@@ -42,16 +41,5 @@ export const Text: Story = {
 
             ]
         }
-    },
-    play: async ({ canvasElement }) => {
-        const canvas = within(canvasElement);
-
-        const nameInput = canvas.getByLabelText('First Name', {
-            selector: 'input'
-        });
-
-        await userEvent.type(nameInput, 'Vivek Kumar', {
-            delay: 100
-        })
     }
 }

@@ -22,6 +22,7 @@ type Story = StoryObj<typeof meta>;
 export const JobApplication: Story =  {
     args: {
         name: 'Job Application',
-        preset: 'jobApplication'
+        preset: 'jobApplication',
+        onChange: undefined
     },
 }

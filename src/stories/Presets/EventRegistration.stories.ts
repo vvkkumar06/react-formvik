@@ -21,6 +21,7 @@ type Story = StoryObj<typeof meta>;
 export const EventRegistration: Story =  {
     args: {
         name: 'Event Registration',
-        preset: 'eventRegistration'
+        preset: 'eventRegistration',
+        onChange: undefined
     },
 }

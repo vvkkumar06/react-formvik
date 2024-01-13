@@ -20,7 +20,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Login: Story = {
     args: {
-        preset: 'login'
+        preset: 'login',
+        onChange: undefined
     },
     play: async ({ canvasElement }) => {
         const c = within(canvasElement);

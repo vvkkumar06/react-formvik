@@ -22,7 +22,8 @@ type Story = StoryObj<typeof meta>;
 export const ContactUs: Story = {
     args: {
         name: 'Contact Us',
-        preset: 'contactUs'
+        preset: 'contactUs',
+        onChange: undefined
     },
     play: async ({ canvasElement }) => {
         const c = within(canvasElement);

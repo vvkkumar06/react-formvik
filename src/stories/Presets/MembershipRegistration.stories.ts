@@ -21,6 +21,7 @@ type Story = StoryObj<typeof meta>
 export const MembershipRegistration: Story =  {
     args: {
         name: 'Membership Registration',
-        preset: 'membershipRegistration'
+        preset: 'membershipRegistration',
+        onChange: undefined
     },
 }

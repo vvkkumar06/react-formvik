@@ -21,7 +21,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Register: Story = {
     args: {
-        preset: 'register'
+        preset: 'register',
+        onChange: undefined
     },
     play: async ({ canvasElement }) => {
       const registerData = {
