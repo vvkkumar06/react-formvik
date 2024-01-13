@@ -1,12 +1,19 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
+    "target": "ES2015",
+    "module": "ESNext",
     "lib": [
       "dom",
       "es2017"
     ],
-    "jsx": "react",
+    "rootDir": "src",
+    "declarationMap": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "noEmit": true,
+    "jsx": "react-jsx",
     "esModuleInterop": true,
     "strict": true,
     "skipLibCheck": true,
@@ -16,11 +23,6 @@
     "baseUrl": "./src",
     "declaration": true,
     "outDir": "./dist",
-    "paths": {
-      "*": [
-        "types/*"
-      ]
-    }
   },
   "include": [
     "src/**/*.ts",
@@ -28,6 +30,7 @@
     "types/**/*.d.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist"
   ]
 }

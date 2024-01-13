@@ -1,9 +1,9 @@
 {
   "name": "react-formvik",
-  "version": "2.1.10",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "type": "module",
+  "version": "2.2.1",
+  "main": "dist/cjs/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/esm/index.js",
   "files": [
     "dist",
     "README.md"
@@ -40,13 +40,14 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^4.9.4",
+    "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "storybook": "^7.6.7",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   },
   "scripts": {
     "storybook": "storybook dev -p 6006",
