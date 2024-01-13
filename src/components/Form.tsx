@@ -3,7 +3,6 @@ import FormField from "./FormField";
 import { getInitialFormState, mergeActionsConfig, mergeFieldsConfig } from "./helpers";
 import * as presets from "./presetConfigs";
 import { FormProps, FormState, Presets } from "./types";
-import React from "react";
 
 const FormPresets: Presets = presets;
 

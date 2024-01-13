@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import { DropdownOption, FormFieldProps } from "./types";
-import React from "react";
 
 
 const FormField = ({ formName, config, formState, formCss, setFormState }: FormFieldProps): ReactNode => {
