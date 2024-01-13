@@ -21,6 +21,7 @@ type Story = StoryObj<typeof meta>
 export const PasswordReset: Story =  {
     args: {
         name: 'Password Reset',
-        preset: 'passwordReset'
+        preset: 'passwordReset',
+        onChange: undefined
     },
 }

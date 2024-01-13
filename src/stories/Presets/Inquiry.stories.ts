@@ -22,6 +22,7 @@ type Story = StoryObj<typeof meta>;
 export const Inquiry: Story =  {
     args: {
         name: 'Inquiry',
-        preset: 'inquiry'
+        preset: 'inquiry',
+        onChange: undefined
     },
 }

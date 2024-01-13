@@ -1,4 +1,3 @@
-import { userEvent, within } from "@storybook/testing-library";
 import { Meta, StoryObj} from '@storybook/react';
 import Form from "../../components/Form";
 
@@ -38,14 +37,5 @@ export const Number: Story = {
                 }
             ]
         }
-    },
-    play: async ( { canvasElement}) => {
-        const canvas = within(canvasElement);
-
-        const ageInput = canvas.getByLabelText('Age', { selector: 'input'});
-
-        await userEvent.type(ageInput, '23', {
-            delay: 100
-        })
     }
 }

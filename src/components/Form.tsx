@@ -1,6 +1,6 @@
-import { useEffect, useState, FC, ReactNode } from "react";
+import { useEffect, useState, FC, ReactNode, useRef } from "react";
 import FormField from "./FormField";
-import { getInitialFormState, mergeActionsConfig, mergeFieldsConfig } from "./helpers";
+import { debounce, getInitialFormState, mergeActionsConfig, mergeFieldsConfig } from "./helpers";
 import * as presets from "./presetConfigs";
 import { FormProps, FormState, Presets } from "./types";
 
@@ -21,6 +21,7 @@ const Form = ({ name, config, onSubmit, preset = '', onChange }: FormProps): Rea
   
   const resetFormState = () => getInitialFormState(formFieldsConfig);
   const [formState, setFormState] = useState(resetFormState() as FormState);
+  const onChangeDebounce = useRef(debounce(onChange, 500));
 
   const handleAction = ({ type }: { type: string}) => {
     switch (type) {
@@ -39,7 +40,7 @@ const Form = ({ name, config, onSubmit, preset = '', onChange }: FormProps): Rea
 
   useEffect(() => {
     if(onChange) {
-      onChange(formState)
+      onChangeDebounce.current(formState);
     }
   }, [formState])
 

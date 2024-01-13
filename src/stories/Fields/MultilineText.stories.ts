@@ -1,4 +1,3 @@
-import { userEvent, within } from "@storybook/testing-library";
 import { Meta, StoryObj} from '@storybook/react';
 import Form from "../../components/Form";
 
@@ -41,15 +40,5 @@ export const MultilineText: Story = {
 
             ]
         }
-    },
-    play: async ({ canvasElement }) => {
-        const canvas = within(canvasElement);
-        const commentInput = canvas.getByLabelText('Comment', {
-            selector: 'textarea'
-        });
-
-        await userEvent.type(commentInput, "I've been following your work for a while now. Always top-notch!", {
-            delay: 50
-        })
     }
 }

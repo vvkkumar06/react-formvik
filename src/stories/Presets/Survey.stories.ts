@@ -21,6 +21,7 @@ type Story = StoryObj<typeof meta>;
 export const Survey: Story =  {
     args: {
         name: 'Survey',
-        preset: 'survey'
+        preset: 'survey',
+        onChange: undefined
     },
 }

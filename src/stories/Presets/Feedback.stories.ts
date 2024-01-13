@@ -21,7 +21,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Feedback: Story =  {
     args: {
-        preset: 'feedback'
+        preset: 'feedback',
+        onChange: undefined
     },
     play: async ({ canvasElement }) => {
         const feedbackData = {
