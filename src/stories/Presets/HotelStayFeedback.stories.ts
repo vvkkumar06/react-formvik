@@ -2,14 +2,14 @@ import { Meta, StoryObj } from '@storybook/react';
 import Form from "../../components/Form";
 
 const meta = {
-    title: 'Presets/Inquiry',
+    title: 'Presets/Hotel Stay Feedback',
     component: Form,
     parameters: {
         layout: 'centered'
     },
     argTypes: {
         onSubmit: {
-            action: 'Inquiry Data:'
+            action: 'HotelStayFeedback Data:'
         }
     }
 } satisfies Meta<typeof Form>
@@ -18,10 +18,10 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Inquiry: Story =  {
+export const HotelStayFeedback: Story =  {
     args: {
-        name: 'Inquiry',
-        preset: 'inquiry',
+        name: 'Hotel Stay Feedback',
+        preset: 'hotelStayFeedback',
         onChange: undefined
     },
 }

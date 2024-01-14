@@ -2,14 +2,14 @@ import { Meta, StoryObj } from '@storybook/react';
 import Form from "../../components/Form";
 
 const meta = {
-    title: 'Presets/Inquiry',
+    title: 'Presets/It Support Request',
     component: Form,
     parameters: {
         layout: 'centered'
     },
     argTypes: {
         onSubmit: {
-            action: 'Inquiry Data:'
+            action: 'ItSupportRequest Data:'
         }
     }
 } satisfies Meta<typeof Form>
@@ -18,10 +18,10 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Inquiry: Story =  {
+export const ItSupportRequest: Story =  {
     args: {
-        name: 'Inquiry',
-        preset: 'inquiry',
+        name: 'It Support Request',
+        preset: 'itSupportRequest',
         onChange: undefined
     },
 }

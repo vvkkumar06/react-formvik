@@ -1,6 +1,6 @@
 import { useEffect, useState, FC, ReactNode, useRef } from "react";
 import FormField from "./FormField";
-import { debounce, getInitialFormState, mergeActionsConfig, mergeFieldsConfig } from "./helpers";
+import { convertCamelCaseToTitleCase, debounce, getInitialFormState, mergeActionsConfig, mergeFieldsConfig } from "./helpers";
 import * as presets from "./presetConfigs";
 import { FormProps, FormState, Presets } from "./types";
 
@@ -12,7 +12,7 @@ const FormPresets: Presets = presets;
  */
 const Form = ({ name, config, onSubmit, preset = '', onChange }: FormProps): ReactNode => {
   if(!name && preset) {
-    name = preset.charAt(0).toUpperCase() + preset.slice(1);
+    name = convertCamelCaseToTitleCase(preset);
   }
   const formPreset = FormPresets[preset];
   const formFieldsConfig = mergeFieldsConfig(formPreset, config);

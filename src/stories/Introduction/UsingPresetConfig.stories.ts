@@ -1,30 +1,29 @@
 import { Meta, StoryObj } from '@storybook/react';
 import Form from "../../components/Form";
+import * as presets from './../../components/presetConfigs';
+import { convertCamelCaseToTitleCase } from './../../components/helpers';
+const presetFields = Object.keys(presets);
+const presetLabelObj: {[key: string]: string} = {};
+
+presetFields.forEach((field: string) => {
+    if(field) {
+        presetLabelObj[field] = convertCamelCaseToTitleCase(field);
+    }
+});
 
 const meta = {
     title: 'Introduction/Using Preset Config',
     component: Form,
-    // tags: ['autodocs'],
     parameters: {
         layout: 'centered'
     },
+    tags: ['autodocs'],
     argTypes: {
         preset: {
-            options: ['login', 'register', 'contactUs', 'feedback', 'jobApplication', 'passwordReset', 'inquiry', 'survey', 'membershipRegistration', 'eventRegistration'],
+            options: presetFields,
             control: {
-                type: 'radio',
-                labels: {
-                    login: 'Login',
-                    register: 'Register',
-                    contactUs: 'Contact',
-                    feedback: 'Feedback',
-                    jobApplication: 'Job Application',
-                    passwordReset: 'Password Reset',
-                    inquiry: 'Inquiry',
-                    survey: 'Survey',
-                    membershipRegistration: 'Membership Registration',
-                    eventRegistration: 'Event Registration'
-                }
+                type: 'select',
+                labels: presetLabelObj
             }
         },
         onSubmit: {
